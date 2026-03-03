@@ -1,22 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links Page</title>
+    <title>Ortak Linkler</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        .card { border: 1px solid #ccc; border-radius: 5px; padding: 16px; margin: 10px 0; }
-        .card a { text-decoration: none; color: #007bff; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .card a:hover {
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
-    <h1>Related Links</h1>
-    <div class="card">
-        <h2>Link 1</h2>
-        <p><a href="https://example.com/1">Visit Link 1</a></p>
-        <h2>Link 2</h2>
-        <p><a href="https://example.com/2">Visit Link 2</a></p>
+    <div class="container">
+        <h1>Ortak Linkler</h1>
+        
+        <div class="cards-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <h2>📋 Lab Bakım Arıza Kontrol Formu</h2>
+                <p>Laboratuvar bakım ve arıza kontrol işlemleri için gerekli bilgileri bu form üzerinden gönderebilirsiniz. Sistem yöneticilerine ulaşmak için lütfen formu eksiksiz doldurunuz.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMR_cdr95Up5pK55xK0J4ng0uScIaFXw12Yg5RsXouyVfztg/viewform" target="_blank">Forma Git</a>
+        
+                <h2>📊 Detay Sayfası</h2>
+                <p>Lab bakım ve arıza kontrol işlemlerinin detaylı kaydı ve istatistiklerini bu sayfada görebilirsiniz. Tüm arızaların durumu ve çözüm süreci buradan takip edilebilir.</p>
+                <a href="https://docs.google.com/spreadsheets/d/1AabdE7iTews89HZ136ryZ5Hij4_n_FbBUvRvOyfGNUw/edit?pli=1&gid=182660818#gid=182660818" target="_blank">Detayları Gör</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
